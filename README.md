@@ -1,8 +1,8 @@
 # standard_algorithms
 
 * Number Array handling
-** Load and print an array
-** Sum numbers in an array
+ * Load and print an array
+ * Sum numbers in an array
 
 Using pseudocode, flowcharts and python write a program which:
 * consists of a main routine, a load array routine, a print array routine and a sum array routine
