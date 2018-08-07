@@ -1,0 +1,38 @@
+BEGIN MAINPROGRAM
+	numArray = []
+	continue = True
+	WHILE continue:
+		choice = Get input "Do you want to (L)oad numbers, (P)rint the Array, (S)um the array, find the ma(X) of the array, find the mi(N) of the array or (Q)uit"
+		CASEWHERE choice is
+			L: loadArray(numArray)
+			P: printArray(numArray)
+			S: sumArray(numArray)
+			X: maxArray(numArray)
+			N: minArray(numArray)
+			Q: continue = False
+		ENDCASE
+	END WHILE
+END MAINPROGRAM
+
+BEGIN loadArray(thisArray)
+	runSubroutine = true
+	WHILE runSubroutine:
+		inputNum = get input("Enter the number you wish to add or Q to return to main program")
+		IF inputNum == Q:
+			runSubroutine = False
+		ELSE:
+			IF inputNum is a number
+				append inputNum to thisArray
+			END IF
+		ENDIF
+	END WHILE	
+END loadArray
+
+
+BEGIN printArray(thisArray)
+	let i = 0
+	REPEAT
+		print thisArray(i)
+		i = i +1
+	UNTIL i >= size of thisArray
+END printArray
